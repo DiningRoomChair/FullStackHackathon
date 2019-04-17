@@ -25,7 +25,7 @@ export default class People extends Component {
     })
   }
 
-  componentWillMount = () => {
+componentDidMount = () => {
     axios.get(`https://swapi.co/api/people/?format=json`)
       .then( ({data}) => {
         this.getPeople(data.count);

@@ -25,7 +25,7 @@ export default class Starships extends Component {
     })
   }
 
-  componentWillMount = () => {
+componentDidMount = () => {
     axios.get(`https://swapi.co/api/starships/?format=json`)
       .then( ({data}) => {
         this.getStarships(data.count);

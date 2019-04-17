@@ -25,7 +25,7 @@ export default class Species extends Component {
     })
   }
 
-  componentWillMount = () => {
+componentDidMount = () => {
     axios.get(`https://swapi.co/api/species/?format=json`)
       .then( ({data}) => {
         this.getSpecies(data.count);

@@ -25,7 +25,7 @@ export default class Films extends Component {
     })
   }
 
-  componentWillMount = () => {
+componentDidMount = () => {
     axios.get(`https://swapi.co/api/films/?format=json`)
       .then( ({data}) => {
         this.getFilms(data.count);

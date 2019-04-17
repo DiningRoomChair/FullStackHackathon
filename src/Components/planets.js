@@ -25,7 +25,7 @@ export default class Planets extends Component {
     })
   }
 
-  componentWillMount = () => {
+componentDidMount = () => {
     axios.get(`https://swapi.co/api/planets/?format=json`)
       .then( ({data}) => {
         this.getPlanets(data.count);

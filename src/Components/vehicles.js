@@ -25,7 +25,7 @@ export default class Vehicles extends Component {
     })
   }
 
-  componentWillMount = () => {
+componentDidMount = () => {
     axios.get(`https://swapi.co/api/vehicles/?format=json`)
       .then( ({data}) => {
         this.getVehicles(data.count);
