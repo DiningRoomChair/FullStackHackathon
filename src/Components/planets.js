@@ -10,7 +10,7 @@ export default class Planets extends Component {
   getPlanets = async function(len){
     var planets = [];
     for(var i = 1; i <= len; i++){
-      planets.push(axios.get(`https://swapi.co/api/planets/${i}/?format=json`)
+      planets.push(axios.get(`https://swapi.dev/api/planets/${i}`)
                     .catch(err => console.warn(err))
       );
     }
@@ -26,7 +26,7 @@ export default class Planets extends Component {
   }
 
 componentDidMount = () => {
-    axios.get(`https://swapi.co/api/planets/?format=json`)
+    axios.get(`https://swapi.dev/api/planets`)
       .then( ({data}) => {
         this.getPlanets(data.count);
       })

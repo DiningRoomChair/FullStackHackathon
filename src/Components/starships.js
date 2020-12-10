@@ -10,7 +10,7 @@ export default class Starships extends Component {
   getStarships = async function(len){
     var starships = [];
     for(var i = 1; i <= len; i++){
-      starships.push(axios.get(`https://swapi.co/api/starships/${i}/?format=json`)
+      starships.push(axios.get(`https://swapi.dev/api/starships/${i}`)
                     .catch(err => console.warn(err))
       );
     }
@@ -26,7 +26,7 @@ export default class Starships extends Component {
   }
 
 componentDidMount = () => {
-    axios.get(`https://swapi.co/api/starships/?format=json`)
+    axios.get(`https://swapi.dev/api/starships`)
       .then( ({data}) => {
         this.getStarships(data.count);
       })
