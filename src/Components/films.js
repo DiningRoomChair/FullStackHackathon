@@ -10,7 +10,7 @@ export default class Films extends Component {
   getFilms = async function(len){
     var films = [];
     for(var i = 1; i <= len; i++){
-      films.push(axios.get(`swapi.dev/api/films/${i}`)
+      films.push(axios.get(`https://swapi.dev/api/films/${i}`)
                     .catch(err => console.warn(err))
       );
     }
@@ -26,7 +26,7 @@ export default class Films extends Component {
   }
 
 componentDidMount = () => {
-    axios.get(`swapi.dev/api/films`)
+    axios.get(`https://swapi.dev/api/films`)
       .then( ({data}) => {
         this.getFilms(data.count);
       })
