@@ -1,14 +1,15 @@
 {
-  "name": "testreact",
+  "name": "FullStackHackathon",
+  "homepage": "./",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
-    "axios": "^0.18.0",
-    "bootstrap": "^4.3.1",
-    "jquery": "^3.3.1",
-    "popper.js": "^1.15.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "axios": "^0.18.1",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "react-scripts": "2.1.8"
   },
   "scripts": {
