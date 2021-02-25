@@ -10,7 +10,7 @@ export default class Species extends Component {
   getSpecies = async function(len){
     var species = [];
     for(var i = 1; i <= len; i++){
-      species.push(axios.get(`https://swapi.dev/api/species/${i}`)
+      species.push(axios.get(`https://swapi.dev/api/species/${i}/`)
                     .catch(err => console.warn(err))
       );
     }
@@ -26,7 +26,7 @@ export default class Species extends Component {
   }
 
 componentDidMount = () => {
-    axios.get(`https://swapi.dev/api/species`)
+    axios.get(`https://swapi.dev/api/species/`)
       .then( ({data}) => {
         this.getSpecies(data.count);
       })

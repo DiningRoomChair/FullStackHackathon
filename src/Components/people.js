@@ -10,7 +10,7 @@ export default class People extends Component {
   getPeople = async function(len){
     var people = [];
     for(var i = 1; i <= len; i++){
-      people.push(axios.get(`https://swapi.dev/api/people/${i}`)
+      people.push(axios.get(`https://swapi.dev/api/people/${i}/`)
                     .catch(err => console.warn(err))
       );
     }
@@ -26,7 +26,7 @@ export default class People extends Component {
   }
 
 componentDidMount = () => {
-    axios.get(`https://swapi.dev/api/people`)
+    axios.get(`https://swapi.dev/api/people/`)
       .then( ({data}) => {
         this.getPeople(data.count);
       })

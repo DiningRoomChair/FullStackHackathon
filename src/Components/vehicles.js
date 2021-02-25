@@ -10,7 +10,7 @@ export default class Vehicles extends Component {
   getVehicles = async function(len){
     var vehicles = [];
     for(var i = 1; i <= len; i++){
-      vehicles.push(axios.get(`https://swapi.dev/api/vehicles/${i}`)
+      vehicles.push(axios.get(`https://swapi.dev/api/vehicles/${i}/`)
                     .catch(err => console.warn(err))
       );
     }
@@ -26,7 +26,7 @@ export default class Vehicles extends Component {
   }
 
 componentDidMount = () => {
-    axios.get(`https://swapi.dev/api/vehicles`)
+    axios.get(`https://swapi.dev/api/vehicles/`)
       .then( ({data}) => {
         this.getVehicles(data.count);
       })
